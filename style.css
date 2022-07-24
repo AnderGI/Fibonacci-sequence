@@ -85,6 +85,9 @@ body{
     color: white;
     font-size: 20px;
     font-weight: 400;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: lowercase;
+    font-style: italic;
     word-wrap: break-word;
     word-break: break-all;
     white-space: normal;

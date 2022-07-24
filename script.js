@@ -26,6 +26,7 @@ fibonacci.reduce(function(previousValue, currentValue, index, array){
 
 resetEl.addEventListener('click', ()=>{
     fibonacci = [0]
-    text.textContent = ""
+    text.textContent = "The sequence:"
     console.log(fibonacci)
+    inputEl.value = ''
 })
