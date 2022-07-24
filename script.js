@@ -2,10 +2,11 @@
 
 let text = document.getElementById('sequence')
 let inputEl = document.getElementById('userInput')
-let buttonEl = document.getElementById('send')
+let sendEl = document.getElementById('send')
+let resetEl = document.getElementById('reset')
 let fibonacci = [0]
 
-buttonEl.addEventListener('click',()=>{ 
+sendEl.addEventListener('click',()=>{ 
 
 fibonacci.reduce(function(previousValue, currentValue, index, array){
     if(inputEl.value >= 0){
@@ -15,7 +16,7 @@ fibonacci.reduce(function(previousValue, currentValue, index, array){
         
     }
     console.log(fibonacci)
-    text.textContent += fibonacci
+    text.textContent = fibonacci
     } else{
         alert('Please introduce a positive number')
     }
@@ -23,4 +24,8 @@ fibonacci.reduce(function(previousValue, currentValue, index, array){
 },1)
 })
 
-//console.log( typeof Number(inputEl.value)
+resetEl.addEventListener('click', ()=>{
+    fibonacci = [0]
+    text.textContent = ""
+    console.log(fibonacci)
+})
