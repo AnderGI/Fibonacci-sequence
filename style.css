@@ -1,0 +1,84 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top:150px ;
+    background: linear-gradient(110deg, #62fd3b 35%, #c8e428 65%);
+}
+.grid-container{
+    background-color: white;
+    border: 2px solid black;
+    width: fit-content;
+    gap: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-template-rows: 50px 100px 100px;
+    grid-template-areas: 
+    "header header header"
+    "input input send"
+    "sequence sequence sequence";
+}
+#title{
+    grid-area: header;
+   /* border: 1px solid grey;*/
+    display: flex; /*column*/
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(235, 226, 226);
+    font-size: 35px;
+    font-weight: 900;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: lowercase;
+    font-style: italic;
+}
+#userInput{
+    grid-area: input;
+    padding-left: 10px;
+    border: none;
+    background-color:rgb(235, 226, 226);
+    font-size: 20px;
+    font-weight: 400;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: lowercase;
+    font-style: italic;
+}
+#userInput:focus{
+    color: red;
+    background-color: blanchedalmond;
+}
+#send{
+    grid-area: send;
+    border: none;
+    background-color:rgb(204, 197, 197);
+    border-radius: 50px;
+    font-size: 25px;
+    font-weight: 900;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: lowercase;
+    font-style: italic;
+    transform: scale(.75);
+    -webkit-transition: transform 1s;
+}
+#send:hover{
+    cursor: pointer;
+    transform: scale(1);
+    -webkit-transition: transform .5s;
+}
+#sequence{
+    display: flex;
+    grid-area: sequence;
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: lowercase;
+    font-style: italic;
+    flex-wrap: wrap;
+}

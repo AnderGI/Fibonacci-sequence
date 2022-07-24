@@ -8,6 +8,7 @@ let fibonacci = [0]
 buttonEl.addEventListener('click',()=>{ 
 
 fibonacci.reduce(function(previousValue, currentValue, index, array){
+    if(inputEl.value >= 0){
     fibonacci.push(previousValue-currentValue)
     for(let i =0; i<Number(inputEl.value)-2; i++){
         fibonacci.push(fibonacci[fibonacci.length-1]+fibonacci[fibonacci.length-2])
@@ -15,6 +16,9 @@ fibonacci.reduce(function(previousValue, currentValue, index, array){
     }
     console.log(fibonacci)
     text.textContent += fibonacci
+    } else{
+        alert('Please introduce a positive number')
+    }
     
 },1)
 })
