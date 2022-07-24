@@ -92,3 +92,10 @@ body{
     word-break: break-all;
     white-space: normal;
 }
+#copyright{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic; 
+    font-size: 20px;
+    font-weight: 400;
+    color: black; 
+}
